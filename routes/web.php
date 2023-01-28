@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,13 +15,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get("/sadnan", function () {
-    return view('test');
-});
+// Route::get("/from", function (Request $req) {
+//     return " <h2> {$req->city} {$req->country} <h2/>";
+// });
 
-Route::get("/get/{name}", function ($name) {
-    return response("<h1> The name is: {$name} <h1/>", 200);
-});
+// Route::get("/get/{name}", function ($name) {
+//     return response("<h1> The name is: {$name} <h1/>", 200);
+// });
+
+// Route::get("/blog/{id}", function ($id) {
+//     return response("<h1> The id is: {$id} <h1/>", 200);
+// })->where('id', '[0-9, a-z, -]+');
